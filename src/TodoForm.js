@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { addTodo } from "../actions/todo";
-import { connect } from "react-redux";
 
 class TodoForm extends Component {
   state = { inputVal: "" };
@@ -39,12 +37,4 @@ class TodoForm extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    addTodo: (item) => {
-      dispatch(addTodo(item));
-    },
-  };
-};
-
-export default connect(null, mapDispatchToProps)(TodoForm);
+export default TodoForm;
